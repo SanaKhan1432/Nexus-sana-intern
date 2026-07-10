@@ -11,7 +11,7 @@ import { useAuth } from '../../context/AuthContext';
 import { CollaborationRequest } from '../../types';
 import { getRequestsForEntrepreneur } from '../../data/collaborationRequests';
 import { investors } from '../../data/users';
-
+import VideoCallRoom from '../../components/ui/VideoCallRoom';
 export const EntrepreneurDashboard: React.FC = () => {
   const { user } = useAuth();
   const [collaborationRequests, setCollaborationRequests] = useState<CollaborationRequest[]>([]);
@@ -147,6 +147,7 @@ export const EntrepreneurDashboard: React.FC = () => {
             </CardBody>
           </Card>
           <MeetingCalendar />
+          <VideoCallRoom/>
         </div>
         
         {/* Right Side: Calendar & Recommended investors */}
