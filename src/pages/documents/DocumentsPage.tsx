@@ -1,4 +1,5 @@
 import React from 'react';
+import DocumentChamber from '../../components/ui/DocumentChamber';
 import { FileText, Upload, Download, Trash2, Share2 } from 'lucide-react';
 import { Card, CardHeader, CardBody } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
@@ -51,6 +52,10 @@ export const DocumentsPage: React.FC = () => {
         <Button leftIcon={<Upload size={18} />}>
           Upload Document
         </Button>
+      </div>
+
+      <div className="mb-8">
+        <DocumentChamber />
       </div>
       
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
